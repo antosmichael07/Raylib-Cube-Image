@@ -1,6 +1,6 @@
 # Raylib Cube Texture
 
-Simple library that makes it possible to draw cubes with 2D textures.<br>
+Simple library that makes it possible to draw cubes with 2D textures.<hr>
 Install with `go get github.com/antosmichael07/Raylib-Cube-Texture`
 
 ## Example
