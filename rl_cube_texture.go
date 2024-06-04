@@ -1,4 +1,4 @@
-package rl_ct
+package rl_ci
 
 import rl "github.com/gen2brain/raylib-go/raylib"
 
