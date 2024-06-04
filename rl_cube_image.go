@@ -3,7 +3,6 @@ package rl_ci
 import rl "github.com/gen2brain/raylib-go/raylib"
 
 type CubeImage struct {
-	Texture       rl.Texture2D
 	Position      rl.Vector3
 	RotationAxis  rl.Vector3
 	RotationAngle float32
