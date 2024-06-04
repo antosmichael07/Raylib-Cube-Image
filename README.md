@@ -1,7 +1,7 @@
 # Raylib Cube Image
 
 Simple library that makes it possible to draw cubes with images.<hr>
-Install with `go get github.com/antosmichael07/Raylib-Cube-Texture`
+Install with `go get github.com/antosmichael07/Raylib-Cube-Image`
 
 ## Example
 
@@ -9,7 +9,7 @@ Install with `go get github.com/antosmichael07/Raylib-Cube-Texture`
 package main
 
 import (
-	rl_ct "github.com/antosmichael07/Raylib-Cube-Texture"
+	rl_ci "github.com/antosmichael07/Raylib-Cube-Image"
 	rl "github.com/gen2brain/raylib-go/raylib"
 )
 
@@ -28,11 +28,11 @@ func main() {
 		rl.CameraPerspective,
 	)
 
-	image := rl.LoadImage("image.png")
-	cube_textures := []rl_ct.CubeTexture{
-		rl_ct.NewCubeTexture(image, rl.NewVector3(0.0, 0.0, 0.0), rl.NewVector3(2.0, 5.0, 2.0), rl.Red),
-		rl_ct.NewCubeTexture(image, rl.NewVector3(3.0, 0.0, 0.0), rl.NewVector3(2.0, 3.0, 2.0), rl.White),
-		rl_ct.NewCubeTexture(image, rl.NewVector3(-3.0, 0.0, 0.0), rl.NewVector3(3.0, 1.0, 2.0), rl.White),
+	image := rl.LoadImage("image.jpeg")
+	cube_images := []rl_ci.CubeImage{
+		rl_ci.NewCubeImage(image, rl.NewVector3(0.0, 0.0, 0.0), rl.NewVector3(2.0, 5.0, 2.0), rl.Red),
+		rl_ci.NewCubeImage(image, rl.NewVector3(3.0, 0.0, 0.0), rl.NewVector3(2.0, 3.0, 2.0), rl.White),
+		rl_ci.NewCubeImage(image, rl.NewVector3(-3.0, 0.0, 0.0), rl.NewVector3(3.0, 1.0, 2.0), rl.White),
 	}
 
 	for !rl.WindowShouldClose() {
@@ -41,8 +41,8 @@ func main() {
 		rl.UpdateCamera(&camera, rl.CameraFree)
 		rl.BeginMode3D(camera)
 
-		for i := range cube_textures {
-			cube_textures[i].DrawCubeTexture()
+		for i := range cube_images {
+			cube_images[i].DrawCubeImage()
 		}
 
 		rl.EndMode3D()

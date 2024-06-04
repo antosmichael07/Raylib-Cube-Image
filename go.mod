@@ -1,4 +1,4 @@
-module github.com/antosmichael07/Raylib-Cube-Texture
+module github.com/antosmichael07/Raylib-Cube-Image
 
 go 1.22.2
 
