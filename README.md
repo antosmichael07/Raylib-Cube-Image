@@ -28,7 +28,7 @@ func main() {
 		rl.CameraPerspective,
 	)
 
-	image := rl.LoadImage("image.jpeg")
+	image := rl.LoadImage("image.png")
 	cube_images := []rl_ci.CubeImage{
 		rl_ci.NewCubeImage(image, rl.NewVector3(0.0, 0.0, 0.0), rl.NewVector3(2.0, 5.0, 2.0), rl.Red),
 		rl_ci.NewCubeImage(image, rl.NewVector3(3.0, 0.0, 0.0), rl.NewVector3(2.0, 3.0, 2.0), rl.White),
