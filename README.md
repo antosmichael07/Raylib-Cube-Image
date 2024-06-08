@@ -28,6 +28,7 @@ func main() {
 		rl.CameraPerspective,
 	)
 
+	// Here are the cubes initialized
 	image := rl.LoadImage("image.png")
 	cube_images := []rl_ci.CubeImage{
 		rl_ci.NewCubeImage(image, rl.NewVector3(0.0, 0.0, 0.0), rl.NewVector3(2.0, 5.0, 2.0), rl.Red),
@@ -41,6 +42,7 @@ func main() {
 		rl.UpdateCamera(&camera, rl.CameraFree)
 		rl.BeginMode3D(camera)
 
+		// Here are the cubes drawn
 		for i := range cube_images {
 			cube_images[i].DrawCubeImage()
 		}
